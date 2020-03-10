@@ -24,10 +24,12 @@ form.addEventListener('submit', (e) => {
                 })
             }
         )
+
+        res.catch(
+            (err) => console.log('Impossible de se connecter à internet !')
+        )
     }
     else {  
         txt_one.textContent = 'Merci de saisir votre adresse !'
     }
-
-    fetch('/weather')
 })
